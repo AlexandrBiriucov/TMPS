@@ -7,9 +7,15 @@ public class Order {
     private Restaurant restaurant;
     private OrderItem items;
 
-    public void finalOrderDeatails(Customer customer, Restaurant restaurant, OrderItem items){
+    public Order(Customer customer, Restaurant restaurant, OrderItem items){
+        this.customer=customer;
+        this.restaurant=restaurant;
+        this.items=items;
+    }
 
-    // System.out.println(customer.getName()+customer.getEmail()+customer.getLocation());
+    public void finalOrderDeatails(){
+
+    System.out.println(customer.getName()+customer.getEmail()+customer.getLocation());
 
 }
 

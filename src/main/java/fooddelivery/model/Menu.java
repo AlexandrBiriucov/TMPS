@@ -1,6 +1,7 @@
 package src.main.java.fooddelivery.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Menu {
@@ -22,6 +23,12 @@ public void findFood(){
 
 
 }
+    public void printMenu(){
+        for (Food food : MenuList){
+            System.out.println(food.getName() + " " +food.getPrice());
+        }
+        
+    }
 
 };
 
