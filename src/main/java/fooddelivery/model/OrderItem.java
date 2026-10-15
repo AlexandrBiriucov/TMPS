@@ -1,11 +1,13 @@
 package src.main.java.fooddelivery.model;
 
 import java.lang.classfile.constantpool.InterfaceMethodRefEntry;
+import java.math.BigDecimal;
+
 
 public class OrderItem {
     
-public Food food;
-public Integer quantity;
+private final Food food;
+private final Integer quantity;
 
 public OrderItem(Food food, Integer quantity){
 
@@ -13,12 +15,29 @@ public OrderItem(Food food, Integer quantity){
     this.quantity= quantity;
 }
 
-public void printOrderDetails(Food food, Integer quantity){
 
-    System.out.println(food.getName()+food.getPrice() + quantity);
+public Food getFood(){
+    return this.food;
+
 
 }
 
+public Integer getQuantity(){
+
+    return quantity;
+}
+
+// public void printOrderDetails(Food food, Integer quantity){
+
+//     System.out.println(food.getName()+food.getPrice() + quantity);
+
+// }
+
+public BigDecimal getSubTotal(){
+
+return food.getPrice().multiply(BigDecimal.valueOf(quantity));
+
+}
 
 
 }

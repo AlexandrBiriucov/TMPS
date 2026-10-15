@@ -1,24 +1,36 @@
 package src.main.java.fooddelivery.model;
-
-
+import java.util.List;
+import java.math.BigDecimal;
 public class Order {
 
-    private Customer customer;
-    private Restaurant restaurant;
-    private OrderItem items;
+    private final Customer customer;
+    private final Restaurant restaurant;
+    private final List<OrderItem> items;
 
-    public Order(Customer customer, Restaurant restaurant, OrderItem items){
+    public Order(Customer customer, Restaurant restaurant, List<OrderItem> items){
         this.customer=customer;
         this.restaurant=restaurant;
-        this.items=items;
+        this.items=List.copyOf(items);
     }
 
-    public void finalOrderDeatails(){
+    public Customer getCustomer(){
+        return this.customer;
+    }
 
-    System.out.println(customer.getName()+customer.getEmail()+customer.getLocation());
+    public Restaurant getRestaurant(){
+        return this.restaurant;
+
+    }
+
+    public List<OrderItem> getItems(){
+
+        return this.items;
+    }
+
+
+    public BigDecimal getTotal(){
+        return items.stream().map(OrderItem::getSubTotal).reduce(BigDecimal.ZERO,BigDecimal::add);
 
 }
-
-
 
     }
