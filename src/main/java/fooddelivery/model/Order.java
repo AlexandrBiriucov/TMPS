@@ -7,11 +7,20 @@ public class Order {
     private final Restaurant restaurant;
     private final List<OrderItem> items;
 
-    public Order(Customer customer, Restaurant restaurant, List<OrderItem> items){
-        this.customer=customer;
-        this.restaurant=restaurant;
-        this.items=List.copyOf(items);
+    // public Order(Customer customer, Restaurant restaurant, List<OrderItem> items){
+    //     this.customer=customer;
+    //     this.restaurant=restaurant;
+    //     this.items=List.copyOf(items);
+    // }
+
+
+    Order(Builder builder) {
+        this.customer = builder.customer;
+        this.restaurant = builder.restaurant;
+        this.items = builder.items;
     }
+
+
 
     public Customer getCustomer(){
         return this.customer;
@@ -32,5 +41,60 @@ public class Order {
         return items.stream().map(OrderItem::getSubTotal).reduce(BigDecimal.ZERO,BigDecimal::add);
 
 }
+
+
+
+
+    public static class Builder{
+
+        private  Customer customer;
+        private  Restaurant restaurant;
+        private  List<OrderItem> items;
+
+
+        public Builder customer(Customer customer){
+            this.customer = customer;
+            return this;
+
+        }
+
+        public Builder restaurant(Restaurant restaurant){
+            this.restaurant = restaurant;
+            return this;
+
+        }
+
+
+        public Builder items(List<OrderItem> items){
+            this.items = List.copyOf(items);
+            return this;
+
+
+        }
+
+
+
+        public Order build(){
+            return new Order(this);
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     }

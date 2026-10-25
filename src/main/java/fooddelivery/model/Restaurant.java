@@ -14,4 +14,21 @@ Menu menu;
 // public void printMenu(Menu menu);
 
 // }
+
+    public String getName(){
+
+        return this.name;
+
+    }
+
+
+    public String getLocation(){
+        return  this.location;
+    }
+
+    public Menu getMenu(){
+        return this.menu;
+
+    }
+
 }
