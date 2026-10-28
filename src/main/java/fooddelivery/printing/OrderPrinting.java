@@ -1,11 +1,14 @@
 package src.main.java.fooddelivery.printing;
 
-import javax.swing.plaf.synth.SynthStyle;
+// import javax.swing.plaf.synth.SynthStyle;
 
 import src.main.java.fooddelivery.model.*;
 public class OrderPrinting {
 
     public void print(Order order){
+
+         System.out.println("Order id: " + order.getId());
+
         System.out.println("Customer :" + order.getCustomer().getName() +" " + order.getCustomer().getEmail() + " " +
          order.getCustomer().getLocation());    
 

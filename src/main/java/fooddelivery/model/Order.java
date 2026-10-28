@@ -1,11 +1,15 @@
 package src.main.java.fooddelivery.model;
 import java.util.List;
+
+import src.main.java.fooddelivery.util.OrderIdGenerator;
+
 import java.math.BigDecimal;
 public class Order {
-
+    private final int OrderID;
     private final Customer customer;
     private final Restaurant restaurant;
     private final List<OrderItem> items;
+
 
     // public Order(Customer customer, Restaurant restaurant, List<OrderItem> items){
     //     this.customer=customer;
@@ -15,12 +19,18 @@ public class Order {
 
 
     Order(Builder builder) {
+        this.OrderID = OrderIdGenerator.getInstance().nextId();
         this.customer = builder.customer;
         this.restaurant = builder.restaurant;
         this.items = builder.items;
     }
 
 
+    public int getId(){
+        return this.OrderID;
+
+
+    }
 
     public Customer getCustomer(){
         return this.customer;
