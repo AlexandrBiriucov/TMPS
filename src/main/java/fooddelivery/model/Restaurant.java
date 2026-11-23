@@ -31,4 +31,12 @@ Menu menu;
 
     }
 
+
+    public boolean sendResponse(){
+
+        return true;
+
+    }
+
+
 }
