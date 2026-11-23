@@ -1,9 +1,9 @@
-package src.main.java.fooddelivery.service;
+package fooddelivery.service;
 
 
-import src.main.java.fooddelivery.model.Order;
-import src.main.java.fooddelivery.notification.Notifier;
-import src.main.java.fooddelivery.printing.OrderPrinting;
+import fooddelivery.model.Order;
+import fooddelivery.notification.Notifier;
+import fooddelivery.printing.OrderPrinting;
 public class OrderService {
     
     

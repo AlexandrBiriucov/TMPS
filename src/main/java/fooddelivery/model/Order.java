@@ -1,7 +1,7 @@
-package src.main.java.fooddelivery.model;
+package fooddelivery.model;
 import java.util.List;
 
-import src.main.java.fooddelivery.util.OrderIdGenerator;
+import fooddelivery.util.OrderIdGenerator;
 
 import java.math.BigDecimal;
 public class Order {

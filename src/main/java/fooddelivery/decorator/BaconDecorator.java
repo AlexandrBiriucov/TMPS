@@ -1,8 +1,8 @@
-package src.main.java.fooddelivery.decorator;
+package fooddelivery.decorator;
 
 import java.math.BigDecimal;
 
-import src.main.java.fooddelivery.model.Food;
+import fooddelivery.model.Food;
 
 public class BaconDecorator extends FoodDecorator {
 

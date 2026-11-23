@@ -1,6 +1,6 @@
-package src.main.java.fooddelivery.notification;
+package fooddelivery.notification;
 
-import src.main.java.fooddelivery.model.*;
+import fooddelivery.model.*;
 
 public class SMSNotifier implements  Notifier{
     

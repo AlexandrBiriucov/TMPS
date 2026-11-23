@@ -1,4 +1,4 @@
-package src.main.java.fooddelivery.model;
+package fooddelivery.model;
 
 import java.lang.classfile.constantpool.InterfaceMethodRefEntry;
 import java.math.BigDecimal;

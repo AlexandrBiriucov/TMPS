@@ -1,16 +1,17 @@
-package src.main.java.fooddelivery.service;
+package fooddelivery.service;
 
-import src.main.java.fooddelivery.model.Order;
+import fooddelivery.model.Order;
+import fooddelivery.payment.PaymentService;
 
 public class CheckoutFacade {
 
 
-    private PaymentService paymentService;
+    private final PaymentService paymentService;
     // private PricingService pricingService;
-    private OrderService orderService;
-    private OrderValidator orderValidator;
+    private final OrderService orderService;
+    private  OrderValidator orderValidator;
 
-    CheckoutFacade(PaymentService paymentService,PricingService pricingService,OrderService orderService,OrderValidator orderValidator){
+    public CheckoutFacade(PaymentService paymentService,OrderValidator orderValidator,OrderService orderService){
         this.paymentService=paymentService;
         // this.pricingService= pricingService;
         this.orderService = orderService;
@@ -21,10 +22,22 @@ public class CheckoutFacade {
     public boolean checkout(Order order){
 
         if(!orderValidator.orderCheck(order)) return false;
+        
+        
+            if (!order.getRestaurant().sendResponse()) {
+       return false;
+            }
 
-        paymentService.pay(order.getTotal());
 
+
+       if (!paymentService.pay(order.getTotal())) return false;
+
+
+       
         orderService.placeOrder(order);
+
+
+
 
         return true;
 

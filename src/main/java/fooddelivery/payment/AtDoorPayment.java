@@ -1,4 +1,4 @@
-package src.main.java.fooddelivery.service;
+package fooddelivery.payment;
 import java.math.BigDecimal;
 public class AtDoorPayment implements PaymentService {
     

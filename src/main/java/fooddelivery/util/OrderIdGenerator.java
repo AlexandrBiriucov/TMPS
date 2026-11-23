@@ -1,9 +1,9 @@
-package src.main.java.fooddelivery.util;
+package fooddelivery.util;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import src.main.java.fooddelivery.model.Order;
-import test.SingletonLazy;
+import fooddelivery.model.Order;
+
 
 //singleton
 

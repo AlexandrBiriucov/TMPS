@@ -1,8 +1,8 @@
-package src.main.java.fooddelivery.printing;
+package fooddelivery.printing;
 
 // import javax.swing.plaf.synth.SynthStyle;
 
-import src.main.java.fooddelivery.model.*;
+import fooddelivery.model.*;
 public class OrderPrinting {
 
     public void print(Order order){

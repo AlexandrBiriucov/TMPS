@@ -1,6 +1,6 @@
-package src.main.java.fooddelivery.service;
-import src.main.java.fooddelivery.model.Order;
-import src.main.java.fooddelivery.model.OrderItem;
+package fooddelivery.service;
+import fooddelivery.model.Order;
+import fooddelivery.model.OrderItem;
 public class OrderValidator {
     
 

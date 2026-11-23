@@ -1,4 +1,4 @@
-package src.main.java.fooddelivery.notification;
+package fooddelivery.notification;
 
 public class SMSFactory extends NotificationFactory {
 

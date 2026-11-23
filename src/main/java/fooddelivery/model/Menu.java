@@ -1,4 +1,4 @@
-package src.main.java.fooddelivery.model;
+package fooddelivery.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
